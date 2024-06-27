@@ -80,7 +80,7 @@ trait TreeNodeMethodsTrait
     public function isLeafNode(): bool
     {
         return $this->getChildNodes()
-            ->count() === 0;
+                ->count() === 0;
     }
 
     /**
@@ -268,10 +268,7 @@ trait TreeNodeMethodsTrait
         unset($this->getChildNodes()[$offset]);
     }
 
-    /**
-     * @return mixed
-     */
-    public function offsetGet(mixed $offset)
+    public function offsetGet(mixed $offset): mixed
     {
         return $this->getChildNodes()[$offset];
     }
